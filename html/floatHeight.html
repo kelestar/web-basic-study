@@ -7,11 +7,13 @@
     <style>
       .parent {
         position: relative;
-        left: calc("50% - 325px");
+        left: 435px;
         width: 650px;
+        background-color: aqua;
         overflow: hidden;
       }
       .parent .child {
+        position: relative;
         float: left;
         width: 180px;
         height: 180px;
@@ -20,20 +22,58 @@
         background-image: url("../img/strawberry.jpg");
         background-size: 100% 100%;
       }
+      .parent .child .wrap1, .wrap2 { 
+        width: 180px;   
+        height: 90px;
+        background-color: rgba(0, 0, 0, .5);
+      }
+
+      .parent .child:hover .wrap1 {
+        animation: fade1 1.8s;
+        animation-iteration-count: 1; 
+        -webkit-animation: fade1 1.8s;
+        -webkit-animation-iteration-count: 1;
+      }
+
+      .parent .child:hover .wrap2 {
+        animation: fade2 1.8s;
+        -webkit-animation: fade2 1.8s;
+        animation-iteration-count: 1; 
+        -webkit-animation-iteration-count: 1;
+      }
+
+      @keyframes fade1 {
+        0% {background-color: rgba(0, 0, 0, .6);height:90px}
+        100% {background-color: rgba(0, 0, 0, 0);height: 0;}
+      }
+      @-webkit-keyframes fade1 {
+        0% {background-color: rgba(0, 0, 0, .6);height:90px}
+        100% {background-color: rgba(0, 0, 0, 0);height: 0;}
+      }
+
+      @keyframes fade2 {
+        0% {background-color: rgba(0, 0, 0, .6);height:90px;margin-top: 0;}
+        100% {background-color: rgba(0, 0, 0, 0);height: 0;margin-top:180px}
+      }
+      @-webkit-keyframes fade2 {
+        0% {background-color: rgba(0, 0, 0, .6);height:90px;margin-top: 0;}
+        100% {background-color: rgba(0, 0, 0, 0);height: 0;margin-top:180px}
+      }
+      
     </style>
   </head>
 
   <body>
     <div class="parent">
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
-      <div class="child"></div>
+      <div class="child"><div class="wrap1"></div><div class="wrap2"></div></div>
+      <div class="child"><div class="wrap1"></div><div class="wrap2"></div></div>
+      <div class="child"><div class="wrap1"></div><div class="wrap2"></div></div>
+      <div class="child"><div class="wrap1"></div><div class="wrap2"></div></div>
+      <div class="child"><div class="wrap1"></div><div class="wrap2"></div></div>
+      <div class="child"><div class="wrap1"></div><div class="wrap2"></div></div>
+      <div class="child"><div class="wrap1"></div><div class="wrap2"></div></div>
+      <div class="child"><div class="wrap1"></div><div class="wrap2"></div></div>
+      <div class="child"><div class="wrap1"></div><div class="wrap2"></div></div>
     </div>
   </body>
 
