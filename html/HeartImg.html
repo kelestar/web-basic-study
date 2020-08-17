@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>心型动画制作</title>
+    <meta charset="utf-8"></meta>
+    <style>
+      .canvos1 {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        float: left;
+        animation: actionCanvos1 2s infinite;
+      }
+      .canvos1 .left {
+        position: relative;
+        margin-top: 30px;
+        width: 90px;
+        height: 150px;
+        float: left;
+        background-color:black;
+        border-radius: 45px 45px 0 0;
+        transform: rotate(-45deg) translateX(33px);
+        -webkit-transform: rotate(-45deg) translateX(33px);
+        animation: activeColor 2s infinite;
+      }
+      .canvos1 .right {
+        position: relative;
+        margin-top: 30px;
+        width: 90px;
+        height: 150px;
+        float: left;
+        background-color:black;
+        border-radius: 45px 45px 0 0;
+        transform: rotate(45deg) translateX(-33px);
+        -webkit-transform: rotate(45deg) translateX(-33px);
+        animation: activeColor 2s infinite;
+      }
+
+      .canvos2 {
+        position: absolute;
+        left: 185px;
+        width: 180px;
+        height: 180px;
+        float: left;
+        animation: actionCanvos2 2s infinite;
+      }
+      .canvos2 .left {
+        position: relative;
+        margin-top: 30px;
+        width: 90px;
+        height: 150px;
+        float: left;
+        background-color:black;
+        border-radius: 45px 45px 0 0;
+        transform: rotate(-45deg) translateX(33px);
+        -webkit-transform: rotate(-45deg) translateX(33px);
+        animation: activeColor 2s infinite;
+      }
+      .canvos2 .right {
+        position: relative;
+        margin-top: 30px;
+        width: 90px;
+        height: 150px;
+        float: left;
+        background-color:black;
+        border-radius: 45px 45px 0 0;
+        transform: rotate(45deg) translateX(-33px);
+        -webkit-transform: rotate(45deg) translateX(-33px);
+        animation: activeColor 2s infinite;
+      }
+
+      @keyframes actionCanvos1 {
+        0% {left: 0;}
+        100% {left: 45px}
+      }
+
+      @keyframes actionCanvos2 {
+        0% {left: 180px;}
+        100% {left: 45px;}
+      }
+
+      @keyframes activeColor {
+        0% {background-color: rgba(0, 0, 0, .1);}
+        100% {background-color: rgba(0, 0, 0, 1);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvos1">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <div class="canvos2">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>
