@@ -1,0 +1,2 @@
+Hello World!
+I'm js as the test of util of toolbox of node!
