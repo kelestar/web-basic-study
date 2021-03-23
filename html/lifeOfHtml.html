@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>前端基础知识汇总-上</title>
+    <meta charset="utf-8"/>
+    <script async>
+      setTimeout(() => {
+        console.log("pre___eeee");
+      }, 2000)
+      console.log("gun");
+    </script>
+  </head>
+  <body>
+    <p id="xx">HHHHH</p>
+
+  </body>
+  <script>
+    setTimeout(() => {
+      document.getElementById("xx").innerHTML = "hello world"
+    }, 1000);
+    document.addEventListener("DOMContentLoaded", (e) => {
+      console.log(e);
+      console.log("EEEEEEEEEE");
+    })
+  </script>
+</html>

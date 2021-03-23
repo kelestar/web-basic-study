@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>meta标签的使用</title>
+    <meta charset="utf-8"/>
+    <!-- <meta http-equiv="refresh" content="5;url=http://baidu.com"/> -->
+    <meta http-equiv="refresh" content="5"/>
+  </head>
+  <body>
+    <h5>Hello world</h5>
+    <p>页面即将刷新</p>
+    <p id="idp"></p>
+    <script>
+      let i = 5;
+      getSecond(i)
+      function getSecond(i) {
+        document.getElementById("idp").innerHTML = `${i--}秒后刷新`
+        setTimeout(() => {
+          if(i) getSecond(i);
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
