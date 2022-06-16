@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <title>流形边框巧妙构想</title>
+  <style>
+    .box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    @keyframes rotate {
+      to { 
+        transform: rotate(1turn);
+      }
+    }
+
+    .under1 {
+      position: relative;
+      width: 0;
+      height: 0;
+      border-top: 250px solid #CCFF99;
+      border-right: 250px solid #CCCCFF;
+      border-bottom: 250px solid #99CCCC;
+      border-left: 250px solid #FF6666;
+      border-radius: 8px;
+      left: -125px;
+      top: -125px;
+      animation: rotate 2s linear infinite; 
+    }
+
+    .box > span {
+      position: absolute;
+      top: 0;
+      margin: 10px;
+      width: 180px;
+      height: 180px;
+      border-radius: 8px;
+      background-color: #993399;
+    }
+  </style>
+
+  <body>
+    <div class="box">
+      <div class="under1"></div>
+      <span></span>
+    </div>
+
+    <!-- <div class="box">
+      <div class="under2"></div>
+      <span></span>
+    </div> -->
+
+  </body>
+</html>
